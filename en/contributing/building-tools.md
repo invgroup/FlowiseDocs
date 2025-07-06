@@ -38,7 +38,7 @@ All custom tool nodes implement the `INode` interface and register under the **T
 | description | Tool description                                 |
 | baseClasses | The base classes from the node tool              |
 
-The (`Tool_Agentflow`) [https://github.com/FlowiseAI/Flowise/blob/main/packages/components/nodes/agentflow/Tool/Tool.ts] handles discovery, schema extraction, and invoking tool instances at runtime.
+The [Tool_Agentflow](https://github.com/FlowiseAI/Flowise/blob/main/packages/components/nodes/agentflow/Tool/Tool.ts) class is responsible for the discovery, schema extraction, and invoking tool instances at runtime. The following code gives a high level overview of how it handles tools
 
 ```typescript
 class Tool_Agentflow implements INode {
