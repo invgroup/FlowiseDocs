@@ -1,7 +1,6 @@
 # Flowise Agentflow v2: Tool Development  Guide
 
-This document provides a step-by-step guide for creating, registering, and testing custom tool nodes in Flowise for Agentflow v2. Whether you're integrating a third‑party API, building internal utilities, or extending core capabilities, this guide covers the full lifecycle of a tool.
-
+This guide aims to help developers implement and integrate new tools into Flowise  for use with Agentflow v2 flows. 
 
 
 ## Overview
@@ -18,12 +17,10 @@ Tools allow modular, reusable functionality in flows, such as:
 Existing tool implementations can be found in the Flowise repository: https://github.com/FlowiseAI/Flowise/tree/main/packages/components/nodes/tools
 
 
-
 ## Getting setup
 
 - Node.js & pnpm installed
 - Install Git and Clone the flowise repository see [README.md](https://github.com/FlowiseAI/Flowise/blob/main/README.md) guide.
-
 
 
 ## Understanding Custom Tools
@@ -40,8 +37,6 @@ All custom tool nodes implement the `INode` interface and register under the **T
 | author      | Creator of the tool                              |
 | description | Tool description                                 |
 | baseClasses | The base classes from the node tool              |
-
-
 
 The (`Tool_Agentflow`) handles discovery, schema extraction, and invoking tool instances at runtime.
 
@@ -63,8 +58,6 @@ class Tool_Agentflow implements INode {
   }
 }
 ```
-
-
 
 ## Implementing a Custom Tool
 
